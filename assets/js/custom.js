@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // --- Configuration ---
   const container = document.querySelector('.background-warp');
-  const logoSrc = 'assets/img/logo/logo.svg'; // Make sure this path is correct!
+  const logoSrc = 'https://www.medlkai.com/assets/img/logo/logo.svg'; // Make sure this path is correct!
   const logoSize = 200; // The size of each logo in pixels
   const blinkInterval = 200; // Time in milliseconds between each new blink starts
 
@@ -54,4 +54,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { once: true }); // 'once: true' automatically removes the event listener
 
   }, blinkInterval);
+
 });
