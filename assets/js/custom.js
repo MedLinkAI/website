@@ -83,6 +83,7 @@ async function switchToEnglish() {
   let url = new URL(window.location.href);
   if (url.pathname.startsWith("/zh/")) {
     url.pathname = url.pathname.replace(/^\/zh\//, "/");
+    url.pathname = url.pathname.replace(/index\.html$/, "");
     window.location.href = url.toString();
   }
 }
@@ -90,7 +91,9 @@ async function switchToEnglish() {
 async function switchToChinese() {
   let url = new URL(window.location.href);
   if (!url.pathname.startsWith("/zh/")) {
+    url.pathname = url.pathname.replace(/index\.html$/, "");
     url.pathname = "/zh" + url.pathname;
     window.location.href = url.toString();
   }
 }
+
