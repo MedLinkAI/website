@@ -18,10 +18,16 @@
           <li class="nav-item"><a class="nav-link fs-5" href="content.html" aria-label="A sample content page"> 内容 </a></li>
           <li class="nav-item"><a class="nav-link fs-5" href="system.html" aria-label="A system message page"> 系统 </a></li>
         </ul>
-        <button onclick="zh_tran('s');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-simplified-icon.svg" alt="简" loading="lazy"></button>
-        <button onclick="zh_tran('t');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-traditional-icon.svg" alt="繁" loading="lazy"></button>
-        <span>&nbsp;|&nbsp;</span>
-        <a href="https://www.medlkai.com/" aria-label="Download this template" class="btn btn-outline-light"><small>ENG</small></a>
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()">
+            <img src="../assets/img/language-icon.svg" alt="语言" width="25px" loading="lazy">
+          </button>
+          <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="dropdownLanguage">
+            <li><a href="https://www.medlkai.com/" aria-label="Download this template" class="btn btn-outline-light"><small>ENG</small></a></li>
+            <li><button onclick="zh_tran('s');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-simplified-icon.svg" alt="简" width="35px" loading="lazy"></button></li>
+            <li><button onclick="zh_tran('t');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-traditional-icon.svg" alt="繁" width="35px" loading="lazy"></button></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>
@@ -271,7 +277,7 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/simplified.traditional.chinese.conversion.js"></script>
-    <script src="https://www.medlkai.com/assets/js/custom.js"></script>
+    <script src="../assets/js/custom.js"></script>
     <script>
       AOS.init({
         duration: 800, // values from 0 to 3000, with step 50ms
