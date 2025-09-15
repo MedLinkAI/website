@@ -26,20 +26,22 @@
   <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
     <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
       <div class="container"><a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html"><img src="../assets/img/logo/logo-banner-white.svg" width="200px" alt="MedLinkAI" /></a>
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-horizontal align-items-center">
           <li class="nav-item"><a class="nav-link fs-5" href="content.html" aria-label="A sample content page"> 内容 </a></li>
           <li class="nav-item"><a class="nav-link fs-5" href="system.html" aria-label="A system message page"> 系统 </a></li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()">
+                <img src="../assets/img/language-icon.svg" alt="语言" width="25px" loading="lazy">
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="dropdownLanguage">
+                <li><button onclick="switchToEnglish();" type="button" aria-label="ENG" class="btn btn-outline-light"><small>ENG</small></button></li>
+                <li><button onclick="zh_tran('s');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-simplified-icon.svg" alt="简" width="35px" loading="lazy"></button></li>
+                <li><button onclick="zh_tran('t');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-traditional-icon.svg" alt="繁" width="35px" loading="lazy"></button></li>
+              </ul>
+            </div>
+          </li>
         </ul>
-        <div class="dropdown">
-          <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()">
-            <img src="../assets/img/language-icon.svg" alt="语言" width="25px" loading="lazy">
-          </button>
-          <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="dropdownLanguage">
-            <li><a href="https://www.medlkai.com/" aria-label="Download this template" class="btn btn-outline-light"><small>ENG</small></a></li>
-            <li><button onclick="zh_tran('s');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-simplified-icon.svg" alt="简" width="35px" loading="lazy"></button></li>
-            <li><button onclick="zh_tran('t');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-traditional-icon.svg" alt="繁" width="35px" loading="lazy"></button></li>
-          </ul>
-        </div>
       </div>
     </nav>
     <main>
@@ -290,26 +292,5 @@
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/simplified.traditional.chinese.conversion.js"></script>
     <script src="../assets/js/custom.js"></script>
-    <script>
-      AOS.init({
-        duration: 800, // values from 0 to 3000, with step 50ms
-      });
-    </script>
-    <script>
-      let scrollpos = window.scrollY
-      const header = document.querySelector(".navbar")
-      const header_height = header.offsetHeight
-      const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-      const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
-      window.addEventListener('scroll', function() {
-        scrollpos = window.scrollY;
-        if (scrollpos >= header_height) {
-          add_class_on_scroll()
-        } else {
-          remove_class_on_scroll()
-        }
-        console.log(scrollpos)
-      })
-    </script>
   </body>
 </html>
