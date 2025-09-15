@@ -17,7 +17,15 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
           <li class="nav-item"><a class="nav-link fs-5" href="content.html" aria-label="A sample content page"> Content </a></li>
           <li class="nav-item"><a class="nav-link fs-5" href="system.html" aria-label="A system message page"> System </a></li>
-        </ul><a href="https://www.medlkai.com/zh/" aria-label="Download this template" class="btn btn-outline-light"><small>中文</small></a>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()">
+            <img src="../assets/img/language-icon.svg" alt="Lang" width="25px" loading="lazy">
+          </button>
+          <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="dropdownLanguage">
+            <li><a href="https://www.medlkai.com/zh/" aria-label="中文" class="btn btn-outline-light"><small>中文</small></a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>
