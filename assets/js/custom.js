@@ -80,19 +80,17 @@ async function toggleDropdown() {
 }
 
 async function switchToEnglish() {
-  let url = window.location.pathname + window.location.search + window.location.hash;
-  // remove leading /zh/
-  if (url.startsWith("/zh/")) {
-    let newUrl = url.replace(/^\/zh\//, "/");
-    window.location.href = newUrl;
+  let url = new URL(window.location.href);
+  if (url.pathname.startsWith("/zh/")) {
+    url.pathname = url.pathname.replace(/^\/zh\//, "/");
+    window.location.href = url.toString();
   }
 }
 
 async function switchToChinese() {
-  let url = window.location.pathname + window.location.search + window.location.hash;
-  // add /zh/ if not already
-  if (!url.startsWith("/zh/")) {
-    let newUrl = "/zh" + url;
-    window.location.href = newUrl;
+  let url = new URL(window.location.href);
+  if (!url.pathname.startsWith("/zh/")) {
+    url.pathname = "/zh" + url.pathname;
+    window.location.href = url.toString();
   }
 }
