@@ -58,7 +58,7 @@
 /* Style for each logo we will create with JS */
 .blinking-logo {
   position: absolute;
-  opacity: 0.15;
+  opacity: 0.1;
   /* The base, dim opacity */
   transition: opacity 1.5s ease-in-out;
   /* Smooth transition for blinking */
@@ -71,7 +71,7 @@
 /* Keyframes define the blink animation */
 @keyframes blink-effect {
   0% {
-    opacity: 0.15;
+    opacity: 0.1;
     /* Start at base opacity */
   }
 
@@ -81,7 +81,7 @@
   }
 
   100% {
-    opacity: 0.15;
+    opacity: 0.1;
     /* Return to base opacity */
   }
 }
