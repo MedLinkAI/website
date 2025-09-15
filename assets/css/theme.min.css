@@ -102,8 +102,7 @@ body.no-scroll {
 }
 
 .menu-toggle {
-  position: relative; /* <-- 1. Corrected from 'position-relative' */
-  z-index: 1; /* <-- 2. Added to lift the button up */
+  z-index: 1;
   background: transparent;
   border: none;
   cursor: pointer;
