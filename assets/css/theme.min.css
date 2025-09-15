@@ -863,6 +863,7 @@ button:not(:disabled) {
 .dropdown-menu li {
   margin: 0;
   padding: 0;
+  white-space: nowrap;
 }
 
 .dropdown-menu.show {
