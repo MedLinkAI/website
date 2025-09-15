@@ -74,6 +74,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const fullscreenMenu = document.getElementById('fullscreen-menu');
+  
+  if (menuToggle && fullscreenMenu) {
+    menuToggle.addEventListener('click', function() {
+      // Toggle the 'active' class on both the button and the menu
+      this.classList.toggle('active');
+      fullscreenMenu.classList.toggle('active');
+      
+      // Toggle a class on the body to prevent scrolling when the menu is open
+      document.body.classList.toggle('no-scroll');
+    });
+  }
+});
+
 async function toggleDropdown() {
   var dropdownMenu = document.getElementById('dropdownMenu');
   dropdownMenu.classList.toggle('show');
