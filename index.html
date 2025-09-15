@@ -23,25 +23,32 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo/logo.svg">
     <link rel="stylesheet" href="assets/css/theme.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4F9Z5CQV8B"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-4F9Z5CQV8B");</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4F9Z5CQV8B");
+    </script>
   </head>
   <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
     <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-      <div class="container"><a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="https://www.medlkai.com/"><img src="assets/img/logo/logo-banner-white.svg" width="200px" alt="MedLinkAI" /></a>
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-horizontal align-items-center">
-          <li class="nav-item"><a class="nav-link fs-5" href="content.html" aria-label="A sample content page"> Content </a></li>
-          <li class="nav-item"><a class="nav-link fs-5" href="system.html" aria-label="A system message page"> System </a></li>
+      <div class="container d-flex justify-content-between align-items-center"><a class="navbar-brand pe-md-4 fs-4" href="https://www.medlkai.com/"><img src="assets/img/logo/logo-banner-white.svg" alt="MedLinkAI" /></a>
+        <ul class="navbar-nav flex-row navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-horizontal align-items-center">
           <li class="nav-item">
-            <div class="dropdown">
-              <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()">
-                <img src="assets/img/language-icon.svg" alt="Lang" width="25px" loading="lazy">
-              </button>
+            <div class="dropdown"><button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()"><img src="assets/img/language-icon.svg" alt="Language" width="20px" loading="lazy"></button>
               <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="dropdownLanguage">
-                <li><button onclick="switchToChinese();" type="button" aria-label="ENG" class="btn btn-outline-light"><small>中文</small></button></li>
+                <li><button onclick="switchToChinese();" type="button" aria-label="中文" class="btn btn-outline-light"><small>中文</small></button></li>
               </ul>
             </div>
           </li>
+          <li class="nav-item ms-3"><button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span class="menu-toggle-bar"></span><span class="menu-toggle-bar"></span><span class="menu-toggle-bar"></span></button></li>
         </ul>
+      </div>
+      <div class="fullscreen-menu" id="fullscreen-menu" style="margin: auto;">
+        <div class="container" id="fullscreen-menu-en"></div>
       </div>
     </nav>
     <main>
@@ -291,5 +298,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/head.menu.en.js"></script>
   </body>
 </html>

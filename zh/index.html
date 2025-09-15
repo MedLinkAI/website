@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>MedLinkAI - 您桌上的医疗保健专家！</title>
-    <meta name="description" content="MedLinkAI 利用 GenAI 简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
+    <meta name="description" content="MedLinkAI 利用生成式人工智能（GenAI）简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
     <meta itemprop="name" content="MedLinkAI - 您桌上的医疗保健专家！" />
-    <meta itemprop="description" content="MedLinkAI 利用 GenAI 简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
+    <meta itemprop="description" content="MedLinkAI 利用生成式人工智能（GenAI）简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
     <meta itemprop="image" content="https://www.medlkai.com/assets/img/background.jpg" />
     <meta property="og:url" content="https://www.medlkai.com/zh/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="MedLinkAI - 您桌上的医疗保健专家！" />
-    <meta property="og:description" content="MedLinkAI 利用 GenAI 简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
+    <meta property="og:description" content="MedLinkAI 利用生成式人工智能（GenAI）简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
     <meta property="og:image" content="https://www.medlkai.com/assets/img/background.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MedLinkAI - 您桌上的医疗保健专家！" />
-    <meta name="twitter:description" content="MedLinkAI 利用 GenAI 简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
+    <meta name="twitter:description" content="MedLinkAI 利用生成式人工智能（GenAI）简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！" />
     <meta name="twitter:image" content="https://www.medlkai.com/assets/img/background.jpg" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/logo/logo.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/logo.svg">
@@ -23,27 +23,34 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/logo/logo.svg">
     <link rel="stylesheet" href="../assets/css/theme.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4F9Z5CQV8B"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-4F9Z5CQV8B");</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4F9Z5CQV8B");
+    </script>
   </head>
   <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
     <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-      <div class="container"><a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="https://www.medlkai.com/zh/"><img src="../assets/img/logo/logo-banner-white.svg" width="200px" alt="MedLinkAI" /></a>
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-horizontal align-items-center">
-          <li class="nav-item"><a class="nav-link fs-5" href="content.html" aria-label="A sample content page"> 内容 </a></li>
-          <li class="nav-item"><a class="nav-link fs-5" href="system.html" aria-label="A system message page"> 系统 </a></li>
+      <div class="container d-flex justify-content-between align-items-center"><a class="navbar-brand pe-md-4 fs-4" href="https://www.medlkai.com/zh/"><img src="../assets/img/logo/logo-banner-white.svg" alt="MedLinkAI" /></a>
+        <ul class="navbar-nav flex-row navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-horizontal align-items-center">
           <li class="nav-item">
-            <div class="dropdown">
-              <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()">
-                <img src="../assets/img/language-icon.svg" alt="语言" width="25px" loading="lazy">
-              </button>
+            <div class="dropdown"><button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownLanguage" aria-expanded="false" onclick="toggleDropdown()"><img src="../assets/img/language-icon.svg" alt="语言" width="20px" loading="lazy"></button>
               <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="dropdownLanguage">
                 <li><button onclick="switchToEnglish();" type="button" aria-label="ENG" class="btn btn-outline-light"><small>ENG</small></button></li>
-                <li><button onclick="zh_tran('s');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-simplified-icon.svg" alt="简" width="35px" loading="lazy"></button></li>
-                <li><button onclick="zh_tran('t');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-traditional-icon.svg" alt="繁" width="35px" loading="lazy"></button></li>
+                <li><button onclick="zh_tran('s');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-simplified-icon.svg" alt="简" loading="lazy" width="35px"></button></li>
+                <li><button onclick="zh_tran('t');" type="button" class="btn btn-outline-light"><img src="../assets/img/zh-traditional-icon.svg" alt="繁" loading="lazy" width="35px"></button></li>
               </ul>
             </div>
           </li>
+          <li class="nav-item ms-3"><button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span class="menu-toggle-bar"></span><span class="menu-toggle-bar"></span><span class="menu-toggle-bar"></span></button></li>
         </ul>
+      </div>
+      <div class="fullscreen-menu" id="fullscreen-menu" style="margin: auto;">
+        <div class="container" id="fullscreen-menu-zh"></div>
       </div>
     </nav>
     <main>
@@ -55,7 +62,7 @@
               <h1 class="display-huge mt-3 mb-3 lh-1">您桌上的医疗保健专家！</h1>
             </div>
             <div class="col-12 col-xl-8">
-              <p class="lead text-secondary">MedLinkAI 利用 GenAI 简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！</p>
+              <p class="lead text-secondary">MedLinkAI 利用生成式人工智能（GenAI）简化预诊流程，统一医院知识，增强健康管理。只需点击一下，即可获得专家医疗服务！</p>
             </div>
             <div class="col-12 text-center"><a href="#" class="btn btn-xl btn-light">加入我们 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -294,5 +301,6 @@
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/simplified.traditional.chinese.conversion.js"></script>
     <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/head.menu.zh.js"></script>
   </body>
 </html>
