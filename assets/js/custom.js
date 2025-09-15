@@ -1,3 +1,20 @@
+AOS.init({ duration: 800, });
+
+let scrollpos = window.scrollY
+const header = document.querySelector(".navbar")
+const header_height = header.offsetHeight
+const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+window.addEventListener('scroll', function() {
+  scrollpos = window.scrollY;
+  if (scrollpos >= header_height) {
+    add_class_on_scroll()
+  } else {
+    remove_class_on_scroll()
+  }
+  console.log(scrollpos)
+})
+
 document.addEventListener('DOMContentLoaded', function() {
   // --- Configuration ---
   const container = document.querySelector('.background-warp');
@@ -60,4 +77,22 @@ document.addEventListener('DOMContentLoaded', function() {
 async function toggleDropdown() {
   var dropdownMenu = document.getElementById('dropdownMenu');
   dropdownMenu.classList.toggle('show');
+}
+
+async function switchToEnglish() {
+  let url = window.location.pathname + window.location.search + window.location.hash;
+  // remove leading /zh/
+  if (url.startsWith("/zh/")) {
+    let newUrl = url.replace(/^\/zh\//, "/");
+    window.location.href = newUrl;
+  }
+}
+
+async function switchToChinese() {
+  let url = window.location.pathname + window.location.search + window.location.hash;
+  // add /zh/ if not already
+  if (!url.startsWith("/zh/")) {
+    let newUrl = "/zh" + url;
+    window.location.href = newUrl;
+  }
 }
