@@ -13,7 +13,7 @@
     <loc>https://www.medlkai.com/zh/contact</loc>
   </url>
   <url>
-    <loc>https://www.medlkai.com/zh</loc>
+    <loc>https://www.medlkai.com/zh/</loc>
   </url>
   <url>
     <loc>https://www.medlkai.com/legal/privacy-policy</loc>
@@ -28,6 +28,6 @@
     <loc>https://www.medlkai.com/contact</loc>
   </url>
   <url>
-    <loc>https://www.medlkai.com/index</loc>
+    <loc>https://www.medlkai.com/</loc>
   </url>
 </urlset>
