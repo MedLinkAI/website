@@ -44,7 +44,7 @@ const footerData = {
       { text: 'Terms of Use', url: 'https://www.medlkai.com/terms-of-use.html' },
       { text: 'Site Map', url: 'https://www.medlkai.com/sitemap.xml', target: '_blank' }
     ],
-    lastUpdate: '09/15/2025',
+    lastUpdate: '09/16/2025',
     copyright: '&copy; MedLinkAI Limited all Rights Reserved.'
   }
 };
@@ -101,7 +101,9 @@ function generateFooter(targetId, data) {
         </div>
         <div class="col-12 col-md-4 mb-3 mb-md-0">
           ${legalLinksHtml}
-          <div class="mt-2">Last update: ${data.legalInfo.lastUpdate}</div>
+        </div>
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          Last update: ${data.legalInfo.lastUpdate}
         </div>
         <div class="col-12 col-md-4 text-md-end">
           <span>${data.legalInfo.copyright}</span>

@@ -90,10 +90,125 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-async function toggleDropdown() {
-  var dropdownMenu = document.getElementById('dropdownMenu');
-  dropdownMenu.classList.toggle('show');
-}
+(function(){
+  const btn = document.getElementById('dropdownLanguage');
+  const menu = document.getElementById('dropdownMenu');
+  if (!btn || !menu) {
+    console.warn('Dropdown portal: missing elements #dropdownLanguage or #dropdownMenu');
+    return;
+  }
+
+  let isOpen = false;
+  const placeholder = document.createComment('dropdown-placeholder');
+  const PORTAL_Z = 3000;
+
+  function positionMenu(){
+    const btnRect = btn.getBoundingClientRect();
+
+    // temporarily make menu measurable if currently display:none
+    const prevDisplay = menu.style.display;
+    const prevVis = menu.style.visibility;
+    menu.style.visibility = 'hidden';
+    menu.style.display = 'block';
+    menu.style.position = 'fixed';
+    menu.style.left = '0px';
+    menu.style.top = '0px';
+
+    const mRect = menu.getBoundingClientRect();
+    let left = btnRect.left;
+    let top = btnRect.bottom;
+
+    // keep small page padding
+    const PAD = 8;
+    // adjust right overflow
+    if (left + mRect.width > window.innerWidth - PAD) {
+      left = Math.max(PAD, window.innerWidth - mRect.width - PAD);
+    }
+    // if no room below, show above
+    if (btnRect.bottom + mRect.height > window.innerHeight - PAD) {
+      top = btnRect.top - mRect.height;
+      // if still negative, clamp to PAD
+      if (top < PAD) top = PAD;
+    }
+
+    menu.style.left = Math.round(left) + 'px';
+    menu.style.top  = Math.round(top)  + 'px';
+
+    // restore visibility/display (but keep it visible if opened)
+    menu.style.visibility = prevVis;
+    menu.style.display = isOpen ? 'block' : prevDisplay;
+  }
+
+  function onDocClick(e){
+    if (e.target === btn || btn.contains(e.target) || menu.contains(e.target)) return;
+    closeMenu();
+  }
+  function onKeyDown(e){
+    if (e.key === 'Escape') closeMenu();
+  }
+
+  function openMenu(){
+    if (isOpen) return;
+
+    // leave a placeholder so we can restore the original DOM position later
+    const parent = menu.parentNode;
+    parent.insertBefore(placeholder, menu);
+
+    // move to body
+    document.body.appendChild(menu);
+    menu.classList.add('portal');
+    menu.style.position = 'fixed';
+    menu.style.zIndex = PORTAL_Z;
+    menu.style.display = 'block';
+    positionMenu();
+
+    isOpen = true;
+    btn.setAttribute('aria-expanded', 'true');
+
+    // add listeners (delay doc click binding so the click that opened it doesn't immediately close it)
+    setTimeout(() => document.addEventListener('click', onDocClick), 0);
+    window.addEventListener('resize', positionMenu);
+    window.addEventListener('scroll', positionMenu, true); // capture scroll on ancestors
+    document.addEventListener('keydown', onKeyDown);
+  }
+
+  function closeMenu(){
+    if (!isOpen) return;
+
+    document.removeEventListener('click', onDocClick);
+    window.removeEventListener('resize', positionMenu);
+    window.removeEventListener('scroll', positionMenu, true);
+    document.removeEventListener('keydown', onKeyDown);
+
+    // restore original position
+    if (placeholder.parentNode) {
+      placeholder.parentNode.insertBefore(menu, placeholder);
+      placeholder.parentNode.removeChild(placeholder);
+    }
+    menu.classList.remove('portal');
+
+    // reset inline styles we used
+    menu.style.display = 'none';
+    menu.style.position = '';
+    menu.style.left = '';
+    menu.style.top = '';
+    menu.style.zIndex = '';
+
+    isOpen = false;
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleMenu(){
+    if (isOpen) closeMenu(); else openMenu();
+  }
+
+  // expose global function so your existing onclick="toggleDropdown()" keeps working
+  window.toggleDropdown = toggleMenu;
+
+  // optional: if you want to attach via JS instead of inline onclick, uncomment:
+  // btn.addEventListener('click', function(e){ e.stopPropagation(); toggleMenu(); });
+
+})();
 
 async function switchToEnglish() {
   let url = new URL(window.location.href);
@@ -112,4 +227,3 @@ async function switchToChinese() {
     window.location.href = url.toString();
   }
 }
-

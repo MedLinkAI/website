@@ -44,7 +44,7 @@ const footerData = {
       { text: '使用条款', url: 'https://www.medlkai.com/zh/terms-of-use.html' },
       { text: '网站地图', url: 'https://www.medlkai.com/sitemap.xml', target: '_blank' }
     ],
-    lastUpdate: '2025年09月15日',
+    lastUpdate: '2025年09月16日',
     copyright: '&copy; MedLinkAI Limited 保留所有权利。'
   }
 };
@@ -101,7 +101,9 @@ function generateFooter(targetId, data) {
         </div>
         <div class="col-12 col-md-4 mb-3 mb-md-0">
           ${legalLinksHtml}
-          <div class="mt-2">最后更新：${data.legalInfo.lastUpdate}</div>
+        </div>
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          最后更新：${data.legalInfo.lastUpdate}
         </div>
         <div class="col-12 col-md-4 text-md-end">
           <span>${data.legalInfo.copyright}</span>
