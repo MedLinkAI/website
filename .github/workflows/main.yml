@@ -22,20 +22,20 @@ jobs:
           echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
 
           find . -type f -name "*.html" -not -path "*/assets/*" | while read -r file; do
-            # Remove "./" prefix
+            # Remove "./" prefix and ".html" suffix
             path="${file#./}"
-            
-            # Remove ".html" suffix
             url_path="${path%.html}"
             
-            # Remove "index" if it's the last part of the path
-            if [[ "$url_path" =~ index$ ]]; then
-              url_path="${url_path%/index}"
+            # Special case for index.html at the root
+            if [[ "$url_path" == "index" ]]; then
+              final_url="$DOMAIN/"
+            # Handle index.html in subdirectories
+            elif [[ "$url_path" =~ /index$ ]]; then
+              final_url="$DOMAIN/${url_path%/index}/"
+            else
+              final_url="$DOMAIN/$url_path"
             fi
 
-            # Construct the final URL
-            final_url="$DOMAIN/$url_path"
-            
             # Add entry to sitemap.xml
             echo "  <url>" >> sitemap.xml
             echo "    <loc>$final_url</loc>" >> sitemap.xml
