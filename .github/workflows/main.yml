@@ -1,0 +1,57 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate sitemap
+        run: |
+          DOMAIN="https://www.medlkai.com"
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+
+          find . -type f -name "*.html" -not -path "*/assets/*" | while read -r file; do
+            # Remove "./" prefix
+            path="${file#./}"
+            
+            # Remove ".html" suffix
+            url_path="${path%.html}"
+            
+            # Remove "index" if it's the last part of the path
+            if [[ "$url_path" =~ index$ ]]; then
+              url_path="${url_path%/index}"
+            fi
+
+            # Construct the final URL
+            final_url="$DOMAIN/$url_path"
+            
+            # Add entry to sitemap.xml
+            echo "  <url>" >> sitemap.xml
+            echo "    <loc>$final_url</loc>" >> sitemap.xml
+            echo "  </url>" >> sitemap.xml
+          done
+
+          echo '</urlset>' >> sitemap.xml
+
+      - name: Upload sitemap.xml as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sitemap
+          path: sitemap.xml
+
+      - name: Commit and push sitemap.xml
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sitemap.xml
+          git commit -m "chore: Generate sitemap.xml" || echo "No changes to commit"
+          git push
