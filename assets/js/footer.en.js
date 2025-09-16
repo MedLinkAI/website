@@ -10,24 +10,24 @@ const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About Us', url: 'https://www.medlkai.com/about.html' },
-        { text: 'Contact', url: 'https://www.medlkai.com/contact.html' }
+        { text: 'About Us', url: 'https://www.medlkai.com/about' },
+        { text: 'Contact', url: 'https://www.medlkai.com/contact' }
       ]
     },
     {
       title: 'Services',
       links: [
-        { text: 'Pre-diagnosis', url: 'https://www.medlkai.com/pre-diagnosis.html' },
-        { text: 'Data Agent', url: 'https://www.medlkai.com/data-agent.html' },
-        { text: 'HMIS', url: 'https://www.medlkai.com/hmis.html' },
-        { text: 'Amplifier', url: 'https://www.medlkai.com/amplifier.html' },
-        { text: 'Pricing', url: 'https://www.medlkai.com/pricing.html' }
+        { text: 'Pre-diagnosis', url: 'https://www.medlkai.com/pre-diagnosis' },
+        { text: 'Data Agent', url: 'https://www.medlkai.com/data-agent' },
+        { text: 'HMIS', url: 'https://www.medlkai.com/hmis' },
+        { text: 'Amplifier', url: 'https://www.medlkai.com/amplifier' },
+        { text: 'Pricing', url: 'https://www.medlkai.com/pricing' }
       ]
     },
     {
       title: 'Support',
       links: [
-        { text: 'FAQ', url: 'https://www.medlkai.com/faq.html' }
+        { text: 'FAQ', url: 'https://www.medlkai.com/faq' }
       ]
     }
   ],
@@ -39,9 +39,9 @@ const footerData = {
       width: '200'
     },
     links: [
-      { text: 'Cookie Policy', url: 'https://www.medlkai.com/legal/cookie-policy.html' },
-      { text: 'Privacy Policy', url: 'https://www.medlkai.com/legal/privacy-policy.html' },
-      { text: 'Terms of Use', url: 'https://www.medlkai.com/legal/terms-of-use.html' },
+      { text: 'Cookie Policy', url: 'https://www.medlkai.com/legal/cookie-policy' },
+      { text: 'Privacy Policy', url: 'https://www.medlkai.com/legal/privacy-policy' },
+      { text: 'Terms of Use', url: 'https://www.medlkai.com/legal/terms-of-use' },
       { text: 'Site Map', url: 'https://www.medlkai.com/sitemap.xml', target: '_blank' }
     ],
     lastUpdate: '09/16/2025',
