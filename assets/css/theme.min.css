@@ -1058,6 +1058,14 @@ button:not(:disabled) {
   margin-right: 10px;
 }
 
+.dropdown-menu.portal {
+  position: fixed !important;
+  z-index: 3000 !important; 
+  display: block !important; 
+  will-change: left, top;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
 .btn {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
