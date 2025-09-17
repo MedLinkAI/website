@@ -17,7 +17,7 @@ var config = {
 	"description": "This website uses cookie or similar technologies. By continuing to use our website, you agree to our",
 	"acceptBtnLabel": "Accept",
 	"declineInfoBtnLabel": "Decline",
-	"moreInfoBtnLink": "https://www.medlkai.com/zh/legal/cookie-policy/",
+	"moreInfoBtnLink": "https://www.medlkai.com/legal/cookie-policy",
 	"moreInfoBtnLabel": "Cookie Policy",
 	"cookieTypesTitle": "Select cookies to accept",
 	"necessaryCookieTypeLabel": "Necessary",
