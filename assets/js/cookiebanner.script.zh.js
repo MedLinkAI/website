@@ -17,7 +17,7 @@ var config = {
 	"description": "本网站使用 Cookie 或类似技术。继续使用本网站即表示您同意我们的 ",
 	"acceptBtnLabel": "同意",
 	"declineInfoBtnLabel": "拒绝",
-	"moreInfoBtnLink": "https://www.medlkai.com/zh/cookie-policy/",
+	"moreInfoBtnLink": "https://www.medlkai.com/zh/legal/cookie-policy",
 	"moreInfoBtnLabel": "Cookie 政策",
 	"cookieTypesTitle": "选择要接受的 Cookie",
 	"necessaryCookieTypeLabel": "必要的",
@@ -190,4 +190,5 @@ var injectScripts = function() {
 				return i = JSON.parse(i), c === !1 ? !1 : i === !1 || -1 === i.indexOf(e) ? !1 : !0
 			}
 		}
+
 	}(jQuery)
