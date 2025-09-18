@@ -4,7 +4,7 @@ const footerData = {
     {
       title: 'Find us',
       links: [
-        { text: 'GitHub', url: 'http://github.com/MedLinkAI-Limited', target: '_blank' },
+        { text: 'GitHub', url: 'http://github.com/MedLinkAI', target: '_blank' },
       ]
     },
     {
