@@ -10,24 +10,24 @@ const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About Us', url: 'https://www.medlkai.com/about' },
-        { text: 'Contact', url: 'https://www.medlkai.com/contact' }
+        { text: 'About Us', url: 'https://www.medlkai.com/company/' },
+        { text: 'Contact', url: 'https://www.medlkai.com/company/contact' }
       ]
     },
     {
       title: 'Services',
       links: [
-        { text: 'Pre-diagnosis', url: 'https://www.medlkai.com/pre-diagnosis' },
-        { text: 'Data Agent', url: 'https://www.medlkai.com/data-agent' },
-        { text: 'HMIS', url: 'https://www.medlkai.com/hmis' },
-        { text: 'Amplifier', url: 'https://www.medlkai.com/amplifier' },
-        { text: 'Pricing', url: 'https://www.medlkai.com/pricing' }
+        { text: 'Overview & Pricing', url: 'https://www.medlkai.com/services/' },
+        { text: 'Pre-diagnosis', url: 'https://www.medlkai.com/services/pre-diagnosis' },
+        { text: 'Data Agent', url: 'https://www.medlkai.com/services/data-agent' },
+        { text: 'HMIS', url: 'https://www.medlkai.com/services/hmis' },
+        { text: 'Amplifier', url: 'https://www.medlkai.com/services/amplifier' },
       ]
     },
     {
       title: 'Support',
       links: [
-        { text: 'FAQ', url: 'https://www.medlkai.com/faq' }
+        { text: 'FAQ', url: 'https://www.medlkai.com/support/faq' }
       ]
     }
   ],

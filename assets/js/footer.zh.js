@@ -10,24 +10,24 @@ const footerData = {
     {
       title: '公司',
       links: [
-        { text: '关于我们', url: 'https://www.medlkai.com/zh/about' },
-        { text: '联系我们', url: 'https://www.medlkai.com/zh/contact' }
+        { text: '关于我们', url: 'https://www.medlkai.com/zh/company/' },
+        { text: '联系我们', url: 'https://www.medlkai.com/zh/company/contact' }
       ]
     },
     {
       title: '服务',
       links: [
-        { text: '预诊断', url: 'https://www.medlkai.com/zh/pre-diagnosis' },
-        { text: '数据智能体', url: 'https://www.medlkai.com/zh/data-agent' },
-        { text: '健康管理信息系统', url: 'https://www.medlkai.com/zh/hmis' },
-        { text: '放大器', url: 'https://www.medlkai.com/zh/amplifier' },
-        { text: '价格', url: 'https://www.medlkai.com/zh/pricing' }
+        { text: '概览 & 价格', url: 'https://www.medlkai.com/zh/services/' },
+        { text: '预诊断', url: 'https://www.medlkai.com/zh/services/pre-diagnosis' },
+        { text: '数据智能体', url: 'https://www.medlkai.com/zh/services/data-agent' },
+        { text: '健康管理信息系统', url: 'https://www.medlkai.com/zh/services/hmis' },
+        { text: '放大器', url: 'https://www.medlkai.com/zh/services/amplifier' },
       ]
     },
     {
       title: '支持',
       links: [
-        { text: '常见问题', url: 'https://www.medlkai.com/zh/faq' }
+        { text: '常见问题', url: 'https://www.medlkai.com/zh/support/faq' }
       ]
     }
   ],
