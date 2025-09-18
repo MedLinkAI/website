@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.medlkai.com/zh/support/</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/zh/legal/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/zh/legal/cookie-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/zh/legal/terms-of-use</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/zh/company/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/zh/company/</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/zh/</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/support/</loc>
+  </url>
+  <url>
     <loc>https://www.medlkai.com/legal/privacy-policy</loc>
   </url>
   <url>
@@ -8,6 +32,12 @@
   </url>
   <url>
     <loc>https://www.medlkai.com/legal/terms-of-use</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/company/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.medlkai.com/company/</loc>
   </url>
   <url>
     <loc>https://www.medlkai.com/</loc>
